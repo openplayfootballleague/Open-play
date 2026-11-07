@@ -154,3 +154,17 @@ Use only accurately recorded data. Do not invent assists or Man of the Match.
 - Prefer additive, reversible migrations. Do not silently delete or rewrite production data.
 - Every interactive control must have a truthful outcome. If a backend is not connected, clearly label the feature as unavailable rather than pretending to save.
 - Test build, types, permissions, core workflows and responsive layouts before claiming completion.
+
+
+## 7. Location-first administration (mandatory)
+- After an authenticated administrator opens the Admin Dashboard, require a location selection before exposing editable administration sections.
+- Initial locations: Bideford, Barnstaple and Torrington. Also provide Add New Location.
+- The location chooser is the admin landing screen. Selecting a location opens that location's Overview and scoped management workspace.
+- Keep a persistent location switcher in the admin navigation/header so an administrator can change location at any time without signing out.
+- All location-scoped registers, summaries, actions, finance, discipline, communications, operations and analytics must be filtered to the selected location by default.
+- Switching location must not move, duplicate, rewrite or expose records from another location. Preserve unsaved edits or warn before switching if an edit is in progress.
+- Provide an All Locations view only for authorised organisation-wide reporting; it must not become the default editing context. Any cross-location action must be explicitly scoped and permission-checked.
+- Add New Location creates a location record and then opens its workspace. It does not automatically create a league, season, venue, teams or players.
+- Location membership and admin permissions are separate from the selected viewing context. Backend authorisation must verify the administrator can access the chosen location on every read and write; a client-side selector is not a security boundary.
+- Store location identity as a first-class parent scope for leagues/venues and related operational records. A league belongs to one location; a location may contain multiple leagues and venues.
+- The current frontend location chooser is a visual foundation only: local preview additions are not persistent until database services and authorised admin APIs are connected.
