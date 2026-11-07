@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Activity, AlertCircle, ArrowUpRight, BarChart3, Bell, CalendarDays, CheckCircle2, ChevronRight, ClipboardList, Flag, LayoutDashboard, LifeBuoy, Menu, Plus, Search, Settings, ShieldCheck, Trophy, UserRound, Users, Wallet, X } from "lucide-react";
-type Section = "Overview" | "Competitions" | "Teams" | "Players" | "Applications" | "Fixtures" | "Results" | "Statistics" | "Finance" | "Communications" | "Settings";
+type Section = "Overview" | "Competitions" | "Teams" | "Players" | "Applications" | "Fixtures" | "Results" | "Statistics" | "Discipline" | "Finance" | "Analytics" | "Communications" | "Enquiries" | "Operations" | "Settings";
 const items: {label:Section; icon:any; group:string}[] = [
-{label:"Overview",icon:LayoutDashboard,group:"WORKSPACE"},{label:"Competitions",icon:Trophy,group:"MANAGEMENT"},{label:"Teams",icon:Flag,group:"MANAGEMENT"},{label:"Players",icon:Users,group:"MANAGEMENT"},{label:"Applications",icon:ClipboardList,group:"MANAGEMENT"},{label:"Fixtures",icon:CalendarDays,group:"MATCHDAY"},{label:"Results",icon:CheckCircle2,group:"MATCHDAY"},{label:"Statistics",icon:BarChart3,group:"INSIGHTS"},{label:"Finance",icon:Wallet,group:"INSIGHTS"},{label:"Communications",icon:Bell,group:"ORGANISATION"},{label:"Settings",icon:Settings,group:"ORGANISATION"}];
+{label:"Overview",icon:LayoutDashboard,group:"WORKSPACE"},{label:"Competitions",icon:Trophy,group:"MANAGEMENT"},{label:"Teams",icon:Flag,group:"MANAGEMENT"},{label:"Players",icon:Users,group:"MANAGEMENT"},{label:"Applications",icon:ClipboardList,group:"MANAGEMENT"},{label:"Fixtures",icon:CalendarDays,group:"MATCHDAY"},{label:"Results",icon:CheckCircle2,group:"MATCHDAY"},{label:"Discipline",icon:ShieldCheck,group:"MATCHDAY"},{label:"Statistics",icon:BarChart3,group:"INSIGHTS"},{label:"Analytics",icon:BarChart3,group:"INSIGHTS"},{label:"Finance",icon:Wallet,group:"INSIGHTS"},{label:"Communications",icon:Bell,group:"ORGANISATION"},{label:"Enquiries",icon:ClipboardList,group:"ORGANISATION"},{label:"Operations",icon:LifeBuoy,group:"ORGANISATION"},{label:"Settings",icon:Settings,group:"ORGANISATION"}];
 const descriptions:Record<Section,[string,string]> = {
 Overview:["Your organisation at a glance","Operational summaries will appear here once competitions and records are connected."],
 Competitions:["No competitions yet","Create your first competition and season. Each competition will have its own format, venue, schedule and team entries."],
@@ -11,9 +11,9 @@ Players:["No player records yet","Player profiles will appear here after registr
 Applications:["No applications awaiting review","New team and player applications will be collected here for review."],
 Fixtures:["No fixtures scheduled","Fixtures will appear here once a season has participating teams and a published schedule."],
 Results:["No results recorded","Published match results and scorecards will appear here."],
-Statistics:["Statistics will build from match records","Only verified appearances, goals and assists will be shown. No sample statistics are used."],
+Statistics:["Statistics will build from match records","Only verified appearances, goals and assists will be shown. No sample statistics are used."],\nDiscipline:["No discipline records yet","Player incidents, team strikes, fines and suspensions will be managed here with restricted access and an audit trail."],\nAnalytics:["No analytics available yet","Financial, competition, venue and growth reporting will appear when verified records exist."],
 Finance:["No financial records yet","Team fees, payments, fines and expenses will be recorded here when finance is configured."],
-Communications:["No communications yet","Announcements and delivery history will appear here once messaging is configured."],
+Communications:["No communications yet","Announcements and delivery history will appear here once messaging is configured."],\nEnquiries:["No enquiries yet","Player, team, referee, sponsorship and general enquiries will be collected in one chronological register."],\nOperations:["No operational records yet","Manage venues, referee availability and assignments, and sponsor agreements here."],
 Settings:["Platform setup","Configure the services and permissions needed to run Open Play. Sensitive credentials will be stored outside the source code."]
 };
 function Brand(){return <div className="brand"><div className="brand-mark">OP</div><div><strong>OPEN PLAY</strong><span>ADMINISTRATION</span></div></div>}
