@@ -11,9 +11,13 @@ Players:["No player records yet","Player profiles will appear here after registr
 Applications:["No applications awaiting review","New team and player applications will be collected here for review."],
 Fixtures:["No fixtures scheduled","Fixtures will appear here once a season has participating teams and a published schedule."],
 Results:["No results recorded","Published match results and scorecards will appear here."],
-Statistics:["Statistics will build from match records","Only verified appearances, goals and assists will be shown. No sample statistics are used."],\nDiscipline:["No discipline records yet","Player incidents, team strikes, fines and suspensions will be managed here with restricted access and an audit trail."],\nAnalytics:["No analytics available yet","Financial, competition, venue and growth reporting will appear when verified records exist."],
+Statistics:["Statistics will build from match records","Only verified appearances, goals and assists will be shown. No sample statistics are used."],
+Discipline:["No discipline records yet","Player incidents, team strikes, fines and suspensions will be managed here with restricted access and an audit trail."],
+Analytics:["No analytics available yet","Financial, competition, venue and growth reporting will appear when verified records exist."],
 Finance:["No financial records yet","Team fees, payments, fines and expenses will be recorded here when finance is configured."],
-Communications:["No communications yet","Announcements and delivery history will appear here once messaging is configured."],\nEnquiries:["No enquiries yet","Player, team, referee, sponsorship and general enquiries will be collected in one chronological register."],\nOperations:["No operational records yet","Manage venues, referee availability and assignments, and sponsor agreements here."],
+Communications:["No communications yet","Announcements and delivery history will appear here once messaging is configured."],
+Enquiries:["No enquiries yet","Player, team, referee, sponsorship and general enquiries will be collected in one chronological register."],
+Operations:["No operational records yet","Manage venues, referee availability and assignments, and sponsor agreements here."],
 Settings:["Platform setup","Configure the services and permissions needed to run Open Play. Sensitive credentials will be stored outside the source code."]
 };
 function Brand(){return <div className="brand"><div className="brand-mark">OP</div><div><strong>OPEN PLAY</strong><span>ADMINISTRATION</span></div></div>}
